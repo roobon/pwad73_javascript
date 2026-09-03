@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #show {
+        font-size: 50px;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="show"></div>
+    <script>
+      let score = 90;
+      if (score >= 80) {
+        document.getElementById("show").innerHTML = "A+";
+      } else if (score >= 50) {
+        document.getElementById("show").innerHTML = "A-";
+      }
+    </script>
+  </body>
+</html>
