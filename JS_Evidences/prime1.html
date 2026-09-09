@@ -1,0 +1,23 @@
+<script>
+function primeTest(x) { // function start
+if(x==0) { // if x==0 start
+return x + " will not allowed";
+} // if x==0 end 
+else if (x==1) { // if 1 start
+return x + " is not a prime number"	
+} // if 1 end
+else if (x==2) { // if 2 start
+return x + " is a prime number"
+} // if 2 end
+else { // else start
+for(i=2; i<x; i++) { // for loop start
+if(x%i==0) { // modulas if start
+return x + " is not a prime number"	
+} // modulas if end
+} // for loop end
+return x + " is a prime number"
+} // else end
+} // funtion end
+
+document.write(primeTest(prompt("Enter a number")));
+</script>

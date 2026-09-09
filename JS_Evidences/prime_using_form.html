@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prime Check from a Form value</title>
+<script>
+	function primeTest() { // function start
+		var x = document.myform.mynum.value;
+		if(x==0) { // if x==0 start
+			return "Blank or 0 value is not allowed";
+		} // if x==0 end 
+		else if (x==1) { // if 1 start
+			return x + " is not a prime number"	
+		} // if 1 end
+		else if (x==2) { // if 2 start
+			return x + " is a prime number"
+		} // if 2 end
+		else { // else start
+			for(i=2; i<x; i++) { // for loop start
+				if(x%i==0) { // modulas if start
+					return x + " is not a prime number"		
+				} // modulas if end
+			} // for loop end
+			return x + " is a prime number"
+		} // else end
+	} // funtion end
+</script>
+</head>
+
+<body>
+<form name="myform" onSubmit="alert(primeTest())">
+	<input type="number" name="mynum">
+    <input type="submit" name="submit" value="TEST">
+</form>
+
+
+
+
+</body>
+</html>

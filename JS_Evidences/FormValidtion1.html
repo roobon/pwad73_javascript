@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validtion</title>
+</head>
+<body>
+<script>
+function formValidate(){
+var a=document.formName.name.value;
+var b=document.formName.gender.value;
+var c=document.formName.phone.value;
+var d=document.formName.mail.value;
+var e=document.formName.address.value;
+var f=document.formName.class.value;
+var g=document.formName.institute.value;
+
+var nameformat = /[a-zA-Z]$/;
+var phoneformat = /[0-9]$/;
+var mailformat = /[A-z0-9._%+-]+@[A-z0-9.-]+\.[A-z]{2,4}$/i; 
+
+if(!a.match(nameformat))
+{
+alert("Please Enter Your Name");
+return false;
+}
+else if(b==null || b=="")
+{
+alert("Please Select gender");
+return false;
+}
+else if(!c.match(phoneformat))
+{
+alert("Please Enter Your Phone number (numeric only)");
+return false;
+}
+else if(!d.match(mailformat))
+{
+alert("Please Enter a valid email address");
+return false;
+}
+else if(e==null || e=="")
+{
+alert("Please Enter Your Postal address");
+return false;
+}
+else if(f==null || f=="")
+{
+alert("Please Select your degree");
+return false;
+}
+else if(g==null || g=="")
+{
+alert("Please Enter Your Institute");
+return false;
+}
+else
+{
+		
+	
+	var myWindow = window.open("", "MsgWindow", "width=400,height=300");
+    myWindow.document.write("<h1>You have submitted</h1>");
+	myWindow.document.write("<p>Name:"+ a + "</p>");
+	myWindow.document.write("<p>Gender:"+ b + "</p>");
+	myWindow.document.write("<p>Phone:"+ c + "</p>");
+	myWindow.document.write("<p>Email:"+ d + "</p>");
+	myWindow.document.write("<p>Address:"+ e + "</p>");
+	myWindow.document.write("<p>Class:"+ e + "</p>");
+	myWindow.document.write("<p>Institute:"+ e + "</p>");
+
+}
+}
+</script>
+<center><form name="formName" onSubmit="return formValidate()">
+<strong>Your Name:&nbsp;</strong><input type="text" name="name" placeholder="Enter Your Name" /><br/><br/>
+<strong>Gender:&nbsp;</strong>
+Male: <input type="radio" name="gender" value="male" />
+Male: <input type="radio" name="gender" value="female" />
+<br><br>
+<strong>Phone No:&nbsp;</strong><input type="text" name="phone" placeholder="Enter Your Phone" /><br/><br/>
+<strong>E-mail ID:&nbsp;</strong><input type="text" name="mail" placeholder="Enter Your E-mail ID" /><br/><br/>
+<strong>Address:&nbsp;</strong>
+<textarea name="address" placeholder="Enter Your Address"></textarea><br/><br/>
+<strong>Class:&nbsp;</strong>
+<select name="class">
+	<option value="" hidden="">Select one</option>
+    <option value="SSC">SSC</option>
+    <option value="HSC">HSC</option>
+    <option value="Graduation">Graduation</option>
+    <option value="HonsMasters">Hons / Masters</option>
+</select>
+<br/><br/>
+<strong>Institute:&nbsp;</strong><input type="text" name="institute" placeholder="Enter Your Institute" /><br/><br/>
+<input type="submit" name="submit" value="Save"/>
+</form>
+</center>
+</body>
+</html>

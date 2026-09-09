@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prime List</title>
+</head>
+
+<body>
+<script>
+	var a = Number(prompt("Put a number")); //5
+	var b = Number(prompt("Put another number")); //10
+	
+	for(a; a<=b; a++) //will check every number and give output
+	{
+		var c = 0;
+		for(x=1; x<=a; x++){ //will devide every number
+			if(a%x==0){
+				c++ //2			
+			}
+		}
+		
+		if(c==2) {
+			document.write(a + ", ");	
+			
+		}		
+	}
+</script>
+
+
+</body>
+</html>

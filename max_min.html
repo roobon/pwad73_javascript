@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maximum and Minimum</title>
+  </head>
+  <body>
+    <script>
+      let num1 = parseInt(prompt("Enter the first number:"));
+      let num2 = parseInt(prompt("Enter the second number:"));
+      let num3 = parseInt(prompt("Enter the third number:"));
+
+      let max = num1; let min = num1;
+      // Find maximum
+      if (num2 > max) {
+        max = num2;
+      }
+      if (num3 > max) {
+        max = num3;
+      }
+      // Find minimum
+      if (num2 < min) {
+        min = num2;
+      }
+      if (num3 < min) {
+        min = num3;
+      }
+      document.write("Maximum Number: " + max + "<br>");
+      document.write("Minimum Number: " + min);
+    </script>
+  </body>
+</html>
