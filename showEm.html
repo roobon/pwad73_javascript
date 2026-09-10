@@ -1,0 +1,31 @@
+<html>  
+<head>  
+<title>with</title>  
+<script language="JavaScript">  
+function showEm(){ 
+      with (document.customer) { 
+      var alpha=fname.value;  
+ var beta=lname.value;  
+      var gamma=address.value;  
+      var delta=city.value;  
+      var epsilon=state.value;  
+}  
+var fullName=alpha + " " + beta + "\n";  
+var livesHere=gamma + "\n" + delta + ", " + epsilon;  
+alert(fullName + livesHere);  
+}  
+</script>  
+</head>  
+<body bgColor="cornsilk">  
+<form name="customer">  
+<input type=text name="fname"> First Name:  
+<input type=text name="lname"> Last Name:  
+<br>  
+<input type=text name="address"> Address:  
+<br>  
+<input type=text name="city"> City:  
+<input type=text name="state" size=2> State:  
+<p>  
+<input type=button value="Click Here" onClick="showEm()">  
+</body>  
+</html> 
