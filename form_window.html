@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .blue {
+        background-color: blue;
+        color: aliceblue;
+        width: 400px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" name="myform">
+      <input type="text" name="name" placeholder="Enter Full Name" /><br />
+      <textarea name="address" placeholder="Enter address"></textarea>
+      <br />
+      <input type="button" onclick="mywindow()" name="submit" value="OPEN" />
+      <input
+        type="button"
+        onclick="mywindow.close()"
+        name="close"
+        value="CLOSE"
+      />
+    </form>
+    <div id="show"></div>
+    <script>
+      function mywindow() {
+        let name = document.myform.name.value;
+        let address = document.myform.address.value;
+        let output = "<div class='blue'>";
+        output += name + "<br>";
+        output += address + "<br>";
+        output += "</div>";
+        //document.getElementById("show").innerHTML = output;
+        mywindow = window.open("", "", "height:300,width:400");
+        mywindow.document.write(output);
+      }
+    </script>
+  </body>
+</html>

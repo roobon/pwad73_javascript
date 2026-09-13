@@ -19,11 +19,26 @@
       function validation() {
         let email = document.myform.email.value;
         let password = document.myform.password.value;
-        let valid = false;
-        //var emailvalid=/[A-z0-9._%+-]+@[A-z0-9.-]+\.[A-z]{2,4}$/i;
-        alert(
-          email.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/),
-        );
+        let x = false;
+        if (email.search(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/) == -1) {
+          alert("Invalid Email address");
+          x = false;
+          return false;
+        } else {
+          x = true;
+        }
+        if (password.search(/^[a-zA-Z0-9]{4,8}$/) == -1) {
+          alert("Invalid Password");
+          x = false;
+          return false;
+        } else {
+          x = true;
+        }
+
+        if (x) {
+          alert("Email and Password are valid");
+          return true;
+        }
       }
     </script>
   </body>
